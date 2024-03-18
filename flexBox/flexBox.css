@@ -1,0 +1,35 @@
+/*Como no hay ningún elemento entre el logo de Vedruna y el menú he usado "justify-content: space-between" para que ambos elementos se alejen a los extremos.*/
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+/*La imagen unicamente tendrá un margen a la izquierda para igualarlo a la referencia, su tamaño será reducido al 15%. Mediante "img[alt="logo"]" me aseguro de
+que unicamente aplico el estilo a esta imagen en concreto, por si se añadieran más en el futuro.*/
+img[alt="logo"]{
+    width: 15%; 
+    margin-left: 40px;
+}
+
+/*Mediante "margin-top: auto" mandaré todo el bloque del menú a la base de la cabecera.*/
+.menu{
+    margin-top: auto;
+}
+
+/*Como los elementos de flex, de forma predeterminada se colocan siguiendo el eje horizontal, con solo aplicarle flex dejará de ser una columna y se comportará
+como una fila. Con el margen derecho de 40px lo igualaré a la referencia.*/
+.menu ul {
+    display: flex;
+    margin-right: 50px;
+}
+
+/*Por último, este margen derecho separará cada elemento de la lista, con tal de limpiar los espacios innecesarios que puedan molestar en el futuro he
+añadido un estilo adicional para borrar el margen derecho del último elemento de la lista "menu".*/
+.menu ul li {
+    margin-right: 10px; 
+}
+
+.menu ul li:last-child {
+    margin-right: 0;
+}
